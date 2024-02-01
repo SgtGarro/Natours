@@ -1,0 +1,62 @@
+---
+import LogoWhite from '@/assets/images/logo-white.png'
+---
+
+<header>
+  <div class="logo-box">
+    <img src={LogoWhite.src} alt="Logo" class="logo" />
+  </div>
+  <div class="text-box">
+    <h1>
+      <span class="main-title">Outdoors</span>
+      <span class="sub-title">is where life happens</span>
+    </h1>
+  </div>
+</header>
+
+<style>
+  header {
+    position: relative;
+    width: 100%;
+    height: 95vh;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(126, 213, 111, 0.8),
+        rgba(40, 180, 133, 0.8)
+      ),
+      url('../assets/images/hero.jpg');
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  }
+  .logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+  }
+  .logo {
+    height: 3.5rem;
+  }
+  .text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  h1 {
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 400;
+  }
+  h1 .main-title {
+    display: block;
+    font-size: 6rem;
+    letter-spacing: 3.5rem;
+  }
+  h1 .sub-title {
+    display: block;
+    font-size: 2rem;
+    letter-spacing: 1.75rem;
+  }
+</style>
