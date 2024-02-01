@@ -1,5 +1,6 @@
 ---
 import LogoWhite from '@/assets/images/logo-white.png'
+import Button from './Button.astro'
 ---
 
 <header>
@@ -8,9 +9,12 @@ import LogoWhite from '@/assets/images/logo-white.png'
   </div>
   <div class="text-box">
     <h1>
-      <span class="main-title">Outdoors</span>
-      <span class="sub-title">is where life happens</span>
+      <span class="title">Outdoors</span>
+      <span class="subtitle">is where life happens</span>
     </h1>
+    <Button to="#" isAnimated type="white" client:visible>
+      Discover our tours
+    </Button>
   </div>
 </header>
 
@@ -42,6 +46,7 @@ import LogoWhite from '@/assets/images/logo-white.png'
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
   }
   h1 {
     color: #fff;
@@ -49,20 +54,20 @@ import LogoWhite from '@/assets/images/logo-white.png'
     text-align: center;
     font-weight: 400;
     backface-visibility: hidden;
+    margin-bottom: 5.6rem;
   }
-  h1 .main-title {
+  h1 .title {
     display: block;
     font-size: 6rem;
     letter-spacing: 3.5rem;
     animation: moveInLeft 1s ease-out;
   }
-  h1 .sub-title {
+  h1 .subtitle {
     display: block;
     font-size: 2rem;
     letter-spacing: 1.75rem;
     animation: moveInRight 1s ease-out;
   }
-
   @keyframes moveInLeft {
     0% {
       opacity: 0;
@@ -76,7 +81,6 @@ import LogoWhite from '@/assets/images/logo-white.png'
       transform: translateX(0);
     }
   }
-
   @keyframes moveInRight {
     0% {
       opacity: 0;
